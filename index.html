@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    <title>Darolec Comercial</title>
+    <meta name="description"
+        content="Proveedores profesionales de insumos médicos para redes hospitalarias y clínicas. Equipos de la mejor calidad.">
+
+    <!-- Google Fonts & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/logos/logolargosinfondo.png" as="image" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <noscript><div class="noscript-warning">Activa JavaScript para búsqueda instantánea y experiencia completa. Si no tienes JavaScript, contáctanos directamente.</div></noscript>
+    <!-- Navbar with Glassmorphism -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html#home" class="logo">
+                <img src="assets/logos/logolargosinfondo.png" alt="Darolec Comercial Logo Largo"
+                    fetchpriority="high">
+            </a>
+            <nav class="nav-links" id="primary-navigation" aria-label="Menú principal">
+                <a href="#home" class="active-link" aria-current="page">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Equipos e Insumos</a>
+                <a href="corporativa.html">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-text-and-search">
+                    <h1 class="hero-main-title">Búsqueda rápida <br> en nuestro catálogo</h1>
+
+                    <div class="search-glass-container">
+                        <input type="text" id="indexSearchInput" class="search-glass-input"
+                            placeholder="¿Qué estás buscando?">
+                        <button class="search-glass-btn" aria-label="Buscar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-animated-gallery">
+                    <div class="gallery-orbit">
+                        <div class="gallery-center-glow"></div>
+
+                        <!-- Item 1: Reservorio (Fushan) -->
+                        <div class="orbit-item item-1">
+                            <a href="productos.html?q=reservorio" class="item-card">
+                                <div class="item-card-bg fushan-glow"></div>
+                                <img src="assets/Productos/fushan/reservorio de silicon/reservariodesilicon.png"
+                                    alt="Reservorio de Silicon" fetchpriority="high">
+                                <span class="item-tag fushan-tag">Reservorio</span>
+                            </a>
+                        </div>
+
+                        <!-- Item 2: Agujas Magnum (Curaway) -->
+                        <div class="orbit-item item-2">
+                            <a href="producto.html?id=prod-curaway-agujaparasistemamagnum" class="item-card">
+                                <div class="item-card-bg curaway-glow"></div>
+                                <img src="assets/Productos/curaway/aguja para sistemamagnum/Magnum.png"
+                                    alt="Agujas Magnum" fetchpriority="high">
+                                <span class="item-tag curaway-tag">Aguja para sistema Magnum</span>
+                            </a>
+                        </div>
+
+                        <!-- Item 3: Jamshidy (Curaway) -->
+                        <div class="orbit-item item-3">
+                            <a href="producto.html?id=prod-curaway-jamshiy" class="item-card">
+                                <div class="item-card-bg curaway-glow"></div>
+                                <img src="assets/Productos/curaway/Jamshiy/AgujaJamshidi.png" alt="Aguja Jamshidy"
+                                    fetchpriority="high">
+                                <span class="item-tag curaway-tag">Jamshidy</span>
+                            </a>
+                        </div>
+
+                        <!-- Item 4: Balones Posparto (Zhongshan) -->
+                        <div class="orbit-item item-4">
+                            <a href="producto.html?id=prod-zhongshan-balonbacky" class="item-card">
+                                <div class="item-card-bg zhongshan-glow"></div>
+                                <img src="assets/Productos/Zhongshan/BalonBacky/balonposparto.png" alt="Balón Posparto"
+                                    fetchpriority="high">
+                                <span class="item-tag zhongshan-tag">Balón Posparto</span>
+                            </a>
+                        </div>
+
+                        <!-- Item 5: Agujas Huber (Kindly) -->
+                        <div class="orbit-item item-5">
+                            <a href="producto.html?id=prod-kindly-huber" class="item-card">
+                                <div class="item-card-bg kindly-glow"></div>
+                                <img src="assets/Productos/Kindly/huber/huber.png" alt="Aguja Huber"
+                                    fetchpriority="high">
+                                <span class="item-tag kindly-tag">Aguja Huber</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories / Products -->
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Marcas con las que trabajamos</h2>
+                </div>
+
+                <div class="brands-interactive-container">
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Curaway" class="brand-interactive-card"
+                            title="Ver productos Curaway">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/curaway.png" alt="Curaway logo" class="brand-img brand-img-logo"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Curaway</h3>
+                                <p>Equipos de biopsia y marcaje, garantizando la más alta calidad y precisión médica.
+                                </p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/curaway.png" class="product-img" alt="Curaway" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Fushan" class="brand-interactive-card" title="Ver productos Fushan">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/fushan.png" alt="Fushan logo" class="brand-img brand-img-logo"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Fushan</h3>
+                                <p>Kits de drenaje, sondas médicas y sistemas de recolección clínica confiables.</p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/fushan.png" class="product-img" alt="Fushan" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Kindly" class="brand-interactive-card" title="Ver productos Kindly">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/Kyndly.png" alt="Kindly logo" class="brand-img brand-img-logo"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Kindly</h3>
+                                <p>Dispositivos y equipos médicos para el cuidado del paciente y monitoreo de
+                                    constantes.
+                                </p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/Kyndly.png" class="product-img" alt="Kindly" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Hoshimed" class="brand-interactive-card"
+                            title="Ver productos Hoshimed">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/hoshimed.png" alt="Hoshimed logo"
+                                    class="brand-img brand-img-logo" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Hoshimed</h3>
+                                <p>Equipos médicos y productos innovadores para la salud.</p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/hoshimed.png" class="product-img" alt="Hoshimed" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Zhongshan" class="brand-interactive-card"
+                            title="Ver productos Zhongshan">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/Zhongzhan.png" alt="Zhongshan logo"
+                                    class="brand-img brand-img-logo" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Zhongshan</h3>
+                                <p>Productos médicos de alta calidad para la salud.</p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/Zhongzhan.png" class="product-img" alt="Zhongshan" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div class="card-slot">
+                        <a href="productos.html?cat=Weikand" class="brand-interactive-card"
+                            title="Ver productos Weikand">
+                            <div class="card-bg"></div>
+                            <div class="logo-container">
+                                <img src="assets/logos/weikang.png" alt="Weikand logo"
+                                    class="brand-img brand-img-weikang" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Weikand</h3>
+                                <p>Equipos médicos innovadores y soluciones avanzadas para el diagnóstico y tratamiento.
+                                </p>
+                                <span class="btn-link btn-white">Ver catálogo &rarr;</span>
+                            </div>
+                            <img src="assets/logos/weikang.png" class="product-img" alt="Weikand" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section class="featured-products featured-products-home">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Productos Destacados</h2>
+                    <p>Una selección de nuestro mejor equipamiento médico profesional.</p>
+                </div>
+
+                <div class="product-grid" id="featuredProductGrid">
+                    <!-- Productos inyectados por JS -->
+                </div>
+
+                <div class="featured-load-more">
+                    <a href="productos.html" id="loadMoreFeaturedBtn"
+                        class="btn btn-outline btn-lg btn-featured-more">Ver
+                        catálogo completo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Contact Section -->
+        <section class="community-contact" id="contact">
+            <div class="container">
+                <div class="community-inner">
+                    <div class="community-header">
+                        <div class="community-logo-container">
+                            <img src="assets/logos/logolargosinfondo.png" alt="Darolec Comercial Logo" class="community-logo">
+                        </div>
+                        <h2 class="community-title">Contactanos para solicitar mas información sobre <span
+                                class="highlight">cualquiera de nuestros productos.</span></h2>
+
+                        <div class="community-social">
+                            <button type="button" aria-label="Facebook" class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" aria-label="Instagram" class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </button>
+                            <button type="button" aria-label="TikTok" class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                </svg>
+                            </button>
+                            <button type="button" aria-label="Mail" class="social-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="community-grid">
+                        <!-- Card 1: Ubicacion -->
+                        <div class="community-card">
+                            <div class="card-icon map-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <p class="card-text">Visítanos en nuestra sede corporativa en <span
+                                    class="highlight">Gaxiola Andrade 407</span>, Iztapalapa, CDMX.</p>
+                        </div>
+
+                        <!-- Card 2: Horarios -->
+                        <div class="community-card">
+                            <div class="card-icon clock-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <p class="card-text">Nuestros <span class="highlight">horarios de atención</span> son de
+                                Lunes a Viernes de 9:00 am a 6:00 pm.</p>
+                        </div>
+
+                        <!-- Card 3: Telefonos -->
+                        <div class="community-card">
+                            <div class="card-icon phone-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="card-text">Contáctenos directamente a nuestras <span class="highlight">líneas de
+                                    atención</span>: +52 (55) 3035 0154.</p>
+                        </div>
+
+                        <!-- Card 4: Correo -->
+                        <div class="community-card">
+                            <div class="card-icon mail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <p class="card-text">Envíenos sus requerimientos al correo <span
+                                    class="highlight">mifactura@darolec.com</span> para cotizaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/logos/logo pequeño sinfondo.png" alt="Darolec Comercial Logo" loading="lazy">
+                    <span class="logo-wordmark">Darolec <span>Comercial</span></span>
+                </div>
+                <p>Atendemos y cubrimos las necesidades del sector salud tanto en la iniciativa privada como en el
+                    gobierno.</p>
+            </div>
+            <div class="footer-links">
+                <h4>¿Por qué comprar en Darolec Comercial?</h4>
+                <ul>
+                    <li><span>•</span> Somos el mejor proveedor a nivel nacional.</li>
+                    <li><span>•</span> Comercializamos con el sector Privado y Gobierno en México.</li>
+                    <li><span>•</span> Distribución en Menudeo y Mayoreo.</li>
+                    <li><span>•</span> Material de Curación e Instrumental Médico.</li>
+                    <li><span>•</span> Distinguiéndose por ofrecer un servicio de calidad.</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>mifactura@darolec.com</p>
+                <p>+52 (55) 3035 0154</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Darolec Comercial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <noscript>
+        <div class="noscript-warning">
+            Esta página funciona mejor con JavaScript habilitado. Si no puedes habilitarlo, contáctanos en mifactura@darolec.com
+        </div>
+    </noscript>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/productos.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <a href="https://wa.me/525530350154?text=Hola%20Darolec%20Comercial%2C%20quiero%20una%20cotizaci%C3%B3n%20directa." class="whatsapp-float-btn" target="_blank" rel="noreferrer noopener" aria-label="Cotiza por WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.967-.942 1.166-.173.198-.347.223-.645.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.497.099-.198.05-.372-.025-.521-.074-.149-.672-1.612-.921-2.206-.242-.579-.487-.5-.672-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.71.307 1.262.49 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.01-1.413.248-.694.248-1.29.173-1.414-.074-.124-.273-.198-.57-.347z" />
+            <path d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 2.12.62 4.08 1.68 5.75L2 22l4.43-1.16C8.04 21.44 9.98 22 12 22c5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04zM12 20.02c-1.86 0-3.6-.5-5.12-1.45l-.36-.21-2.63.69.7-2.56-.24-.41C3.23 14.45 2.84 13.26 2.84 12c0-4.99 4.07-9.06 9.06-9.06s9.06 4.07 9.06 9.06-4.07 9.06-9.06 9.06z" />
+        </svg>
+        <span>Cotiza por WhatsApp</span>
+    </a>
+</body>
+
+</html>

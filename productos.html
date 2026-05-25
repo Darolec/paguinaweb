@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Catálogo de Productos - Darolec Comercial</title>
+    <meta name="description"
+        content="Catálogo completo de insumos y equipos médicos profesionales para redes hospitalarias y clínicas.">
+    <!-- Google Fonts & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/logos/logolargosinfondo.png" as="image" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <noscript><div class="noscript-warning">Activa JavaScript para ver el catálogo correctamente. Si necesitas ayuda, contáctanos directamente.</div></noscript>
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logolargosinfondo.png" alt="Darolec Comercial Logo Largo"
+                    fetchpriority="high">
+            </a>
+            <nav class="nav-links" id="primary-navigation" aria-label="Menú principal">
+                <a href="index.html#home">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html" class="active-link" aria-current="page">Equipos e Insumos</a>
+                <a href="corporativa.html">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestro Catálogo</h1>
+                <p>Explora nuestra gama de equipamiento médico de alta precisión diseñado para las exigencias clínicas
+                    más altas.</p>
+            </div>
+        </section>
+
+        <!-- Product Details -->
+        <section class="products">
+            <div class="container products-layout">
+                <!-- Left Sidebar Filters -->
+                <aside class="sidebar-filters">
+                    <div class="filter-search-container search-container">
+                        <label class="sr-only" for="searchInput">Buscar producto</label>
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Buscar producto...">
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h3>MARCAS</h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="filter-content" id="filterMarca">
+                            <label class="custom-checkbox"><input type="checkbox" value="Curaway"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Curaway</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Fushan"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Fushan</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Hoshimed"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Hoshimed</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Kindly"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Kindly</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Weikand"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Weikand</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Zhongshan"
+                                    class="filter-checkbox marca-cb"> <span class="checkmark"></span> Zhongshan</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h3>USO RECOMENDADO</h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="filter-content" id="filterUso">
+                            <label class="custom-checkbox"><input type="checkbox" value="Acceso vascular"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Acceso
+                                Vascular</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Anestesia"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Anestesia /
+                                Punción</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Biopsia"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Biopsia</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Drenaje"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Drenaje
+                                Quirúrgico</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Inspección Mamaria"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Inspección
+                                Mamaria</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Nutrición"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Nutrición /
+                                Alimentación</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Obstétrico"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Obstétrico</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Recolección"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Recolección de
+                                Orina</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Respiratorio"
+                                    class="filter-checkbox uso-cb"> <span class="checkmark"></span> Respiratorio</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h3>CALIBRE</h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="filter-content" id="filterCalibre">
+                            <label class="custom-checkbox"><input type="checkbox" value="11G"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> 11G -
+                                13G</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="14G"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> 14G -
+                                17G</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="18G"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> 18G -
+                                21G</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="22G"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> 22G -
+                                27G</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="fr"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> Medidas Fr
+                                (Sondas)</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="mm"
+                                    class="filter-checkbox calibre-cb"> <span class="checkmark"></span> Medidas
+                                mm</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h3>LONGITUD</h3>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+                                <polyline points="18 15 12 9 6 15"></polyline>
+                            </svg>
+                        </div>
+                        <div class="filter-content" id="filterLongitud">
+                            <label class="custom-checkbox"><input type="checkbox" value="Corta"
+                                    class="filter-checkbox longitud-cb"> <span class="checkmark"></span> Corta (10mm -
+                                90mm)</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Media"
+                                    class="filter-checkbox longitud-cb"> <span class="checkmark"></span> Media (100mm -
+                                130mm)</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Larga"
+                                    class="filter-checkbox longitud-cb"> <span class="checkmark"></span> Larga (150mm -
+                                250mm)</label>
+                            <label class="custom-checkbox"><input type="checkbox" value="Cateter"
+                                    class="filter-checkbox longitud-cb"> <span class="checkmark"></span> Catéter / Sonda
+                                (cm)</label>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="products-main">
+                    <div class="product-grid" id="productGrid">
+                        <!-- Products will be injected here via JavaScript -->
+                    </div>
+
+                    <!-- Pagination Controls -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination buttons will be injected here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/logos/logo pequeño sinfondo.png" alt="Darolec Comercial Logo" loading="lazy">
+                    <span class="logo-wordmark">Darolec <span>Comercial</span></span>
+                </div>
+                <p>Atendemos y cubrimos las necesidades del sector salud tanto en la iniciativa privada como en el
+                    gobierno.</p>
+            </div>
+            <div class="footer-links">
+                <h4>¿Por qué comprar en Darolec Comercial?</h4>
+                <ul>
+                    <li><span>•</span> Somos el mejor proveedor a nivel nacional.</li>
+                    <li><span>•</span> Comercializamos con el sector Privado y Gobierno en México.</li>
+                    <li><span>•</span> Distribución en Menudeo y Mayoreo.</li>
+                    <li><span>•</span> Material de Curación e Instrumental Médico.</li>
+                    <li><span>•</span> Distinguiéndose por ofrecer un servicio de calidad.</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>mifactura@darolec.com</p>
+                <p>+52 (55) 3035 0154</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Darolec Comercial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <noscript>
+        <div class="noscript-warning">Este sitio utiliza JavaScript para la experiencia de productos. Por favor habilita JavaScript en tu navegador.</div>
+    </noscript>
+    <script src="js/data.js" defer></script>
+    <script src="js/productos.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <a href="https://wa.me/525530350154?text=Hola%20Darolec%20Comercial%2C%20quiero%20una%20cotizaci%C3%B3n%20directa." class="whatsapp-float-btn" target="_blank" rel="noreferrer noopener" aria-label="Cotiza por WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.967-.942 1.166-.173.198-.347.223-.645.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.497.099-.198.05-.372-.025-.521-.074-.149-.672-1.612-.921-2.206-.242-.579-.487-.5-.672-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.71.307 1.262.49 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.01-1.413.248-.694.248-1.29.173-1.414-.074-.124-.273-.198-.57-.347z" />
+            <path d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 2.12.62 4.08 1.68 5.75L2 22l4.43-1.16C8.04 21.44 9.98 22 12 22c5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04zM12 20.02c-1.86 0-3.6-.5-5.12-1.45l-.36-.21-2.63.69.7-2.56-.24-.41C3.23 14.45 2.84 13.26 2.84 12c0-4.99 4.07-9.06 9.06-9.06s9.06 4.07 9.06 9.06-4.07 9.06-9.06 9.06z" />
+        </svg>
+        <span>Cotiza por WhatsApp</span>
+    </a>
+</body>
+
+</html>
