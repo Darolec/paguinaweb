@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/logos/logolargosinfondo.png" as="image" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 
 </head>
 
@@ -214,10 +215,6 @@
             <p>&copy; 2026 Darolec Comercial. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <noscript>
-        <div class="noscript-warning">Este sitio utiliza JavaScript para mejorar la navegación. Por favor habilita JavaScript en tu navegador.</div>
-    </noscript>
     <script src="js/data.js" defer></script>
     <script src="js/productos.js" defer></script>
     <script src="js/main.js" defer></script>

@@ -14,10 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/logos/logolargosinfondo.png" as="image" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 </head>
 
 <body>
@@ -67,59 +67,142 @@
                     </div>
                 </div>
 
-                <div class="hero-animated-gallery">
-                    <div class="gallery-orbit">
-                        <div class="gallery-center-glow"></div>
 
-                        <!-- Item 1: Reservorio (Fushan) -->
-                        <div class="orbit-item item-1">
-                            <a href="productos.html?q=reservorio" class="item-card">
-                                <div class="item-card-bg fushan-glow"></div>
-                                <img src="assets/Productos/fushan/reservorio de silicon/reservariodesilicon.png"
-                                    alt="Reservorio de Silicon" fetchpriority="high">
-                                <span class="item-tag fushan-tag">Reservorio</span>
+                <div class="hero-cards-container">
+                    <div class="product-cards-grid">
+                        
+                        <!-- Card 1: Aguja Huber (Kindly) -->
+                        <div class="card">
+                            <a class="image-link" href="producto.html?id=prod-kindly-huber">
+                                <img class="image" src="assets/Productos/Kindly/huber/huber.png" alt="Aguja Huber">
                             </a>
+                            <div class="content">
+                                <h2>Aguja Huber</h2>
+                                <h3>Kindly</h3>
+                                <p>
+                                    Agujas para perfusión de quimioterapia o soluciones con set de infusión y sitio en Y.
+                                </p>
+                                <a class="read-more" href="producto.html?id=prod-kindly-huber">Ver más</a>
+                                <div class="details">
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                        </svg>
+                                        <em>Acceso Vascular</em>
+                                    </span>
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                        <em>Kindly</em>
+                                    </span>
+                                </div>
+                                <div class="buttons">
+                                    <a class="primary-btn" href="producto.html?id=prod-kindly-huber">Ver Detalles</a>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Item 2: Agujas Magnum (Curaway) -->
-                        <div class="orbit-item item-2">
-                            <a href="producto.html?id=prod-curaway-agujaparasistemamagnum" class="item-card">
-                                <div class="item-card-bg curaway-glow"></div>
-                                <img src="assets/Productos/curaway/aguja para sistemamagnum/Magnum.png"
-                                    alt="Agujas Magnum" fetchpriority="high">
-                                <span class="item-tag curaway-tag">Aguja para sistema Magnum</span>
+                        <!-- Card 2: Reservorio de Silicón (Fushan) -->
+                        <div class="card">
+                            <a class="image-link" href="producto.html?id=prod-fushan-reservoriodesilicon">
+                                <img class="image" src="assets/Productos/fushan/reservorio de silicon/reservariodesilicon.png" alt="Reservorio de Silicón">
                             </a>
+                            <div class="content">
+                                <h2>Reservorio Silicón</h2>
+                                <h3>Fushan</h3>
+                                <p>
+                                    Reservorio de silicona de alta calidad con capacidad de 100 ml y entrada inferior.
+                                </p>
+                                <a class="read-more" href="producto.html?id=prod-fushan-reservoriodesilicon">Ver más</a>
+                                <div class="details">
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                        </svg>
+                                        <em>Drenaje Clínico</em>
+                                    </span>
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                        <em>Fushan</em>
+                                    </span>
+                                </div>
+                                <div class="buttons">
+                                    <a class="primary-btn" href="producto.html?id=prod-fushan-reservoriodesilicon">Ver Detalles</a>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Item 3: Jamshidy (Curaway) -->
-                        <div class="orbit-item item-3">
-                            <a href="producto.html?id=prod-curaway-jamshiy" class="item-card">
-                                <div class="item-card-bg curaway-glow"></div>
-                                <img src="assets/Productos/curaway/Jamshiy/AgujaJamshidi.png" alt="Aguja Jamshidy"
-                                    fetchpriority="high">
-                                <span class="item-tag curaway-tag">Jamshidy</span>
+                        <!-- Card 3: Balón Bakri (Zhongshan) -->
+                        <div class="card">
+                            <a class="image-link" href="producto.html?id=prod-zhongshan-balonbacky">
+                                <img class="image" src="assets/Productos/Zhongshan/BalonBacky/balonposparto.png" alt="Balón Bakri">
                             </a>
+                            <div class="content">
+                                <h2>Balón Bakri</h2>
+                                <h3>Zhongshan</h3>
+                                <p>
+                                    Balón hemostático postparto 24Fr de 500ml para contención compresiva de hemorragias.
+                                </p>
+                                <a class="read-more" href="producto.html?id=prod-zhongshan-balonbacky">Ver más</a>
+                                <div class="details">
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                        </svg>
+                                        <em>Obstetricia</em>
+                                    </span>
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                        <em>Zhongshan</em>
+                                    </span>
+                                </div>
+                                <div class="buttons">
+                                    <a class="primary-btn" href="producto.html?id=prod-zhongshan-balonbacky">Ver Detalles</a>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Item 4: Balones Posparto (Zhongshan) -->
-                        <div class="orbit-item item-4">
-                            <a href="producto.html?id=prod-zhongshan-balonbacky" class="item-card">
-                                <div class="item-card-bg zhongshan-glow"></div>
-                                <img src="assets/Productos/Zhongshan/BalonBacky/balonposparto.png" alt="Balón Posparto"
-                                    fetchpriority="high">
-                                <span class="item-tag zhongshan-tag">Balón Posparto</span>
+                        <!-- Card 4: Aguja Magnum (Curaway) -->
+                        <div class="card">
+                            <a class="image-link" href="producto.html?id=prod-curaway-agujaparasistemamagnum">
+                                <img class="image" src="assets/Productos/curaway/aguja para sistemamagnum/Magnum.png" alt="Aguja Magnum">
                             </a>
+                            <div class="content">
+                                <h2>Aguja Magnum</h2>
+                                <h3>Curaway</h3>
+                                <p>
+                                    Aguja de biopsia desechable en acero inoxidable para utilizarse con disparador Magnum.
+                                </p>
+                                <a class="read-more" href="producto.html?id=prod-curaway-agujaparasistemamagnum">Ver más</a>
+                                <div class="details">
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                        </svg>
+                                        <em>Biopsia Médica</em>
+                                    </span>
+                                    <span class="item">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                        </svg>
+                                        <em>Curaway</em>
+                                    </span>
+                                </div>
+                                <div class="buttons">
+                                    <a class="primary-btn" href="producto.html?id=prod-curaway-agujaparasistemamagnum">Ver Detalles</a>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Item 5: Agujas Huber (Kindly) -->
-                        <div class="orbit-item item-5">
-                            <a href="producto.html?id=prod-kindly-huber" class="item-card">
-                                <div class="item-card-bg kindly-glow"></div>
-                                <img src="assets/Productos/Kindly/huber/huber.png" alt="Aguja Huber"
-                                    fetchpriority="high">
-                                <span class="item-tag kindly-tag">Aguja Huber</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -397,12 +480,6 @@
             <p>&copy; 2026 Darolec Comercial. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <noscript>
-        <div class="noscript-warning">
-            Esta página funciona mejor con JavaScript habilitado. Si no puedes habilitarlo, contáctanos en mifactura@darolec.com
-        </div>
-    </noscript>
 
     <script src="js/data.js" defer></script>
     <script src="js/productos.js" defer></script>

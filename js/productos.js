@@ -232,21 +232,110 @@ function renderGridElements(products, grid, isFuzzy) {
 
     const fragment = document.createDocumentFragment();
     products.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-            card.innerHTML = generateProductCardHTML(p, false);
-            // Attach error handler to product image (avoid inline handlers)
-            const imgEl = card.querySelector('.product-image img');
-            if (imgEl) {
-                const ph = card.querySelector('.placeholder-icon');
-                imgEl.addEventListener('error', () => {
-                    imgEl.style.display = 'none';
-                    if (ph) ph.style.display = 'flex';
-                });
-            }
-        fragment.appendChild(card);
+        fragment.appendChild(createProductCardDOM(p, false));
     });
     grid.appendChild(fragment);
+}
+
+/**
+ * Crea y retorna la tarjeta de producto usando DOM seguro en lugar de plantillas HTML.
+ * @param {Object} p - Producto
+ * @param {boolean} isSimilar - Si la tarjeta es para productos similares.
+ * @returns {HTMLElement}
+ */
+function createProductCardDOM(p, isSimilar = false) {
+    const safeUrl = p.url ? sanitizeURL(p.url) : `productos.html?q=${encodeURIComponent(p.title)}`;
+
+    const card = document.createElement('article');
+    card.className = `product-card${isSimilar ? ' similar-product-card' : ''}`;
+
+    const imageLink = document.createElement('a');
+    imageLink.href = safeUrl;
+    imageLink.className = 'product-image';
+
+    const img = document.createElement('img');
+    img.src = sanitizeURL(p.img);
+    img.alt = escapeHTML(p.title);
+    img.addEventListener('error', () => {
+        img.style.display = 'none';
+        const ph = imageLink.querySelector('.placeholder-icon');
+        if (ph) ph.style.display = 'flex';
+    });
+
+    const placeholder = document.createElement('div');
+    placeholder.className = 'placeholder-icon';
+    placeholder.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'image-overlay';
+
+    imageLink.appendChild(img);
+    imageLink.appendChild(placeholder);
+    imageLink.appendChild(overlay);
+
+    const info = document.createElement('div');
+    info.className = `product-info${isSimilar ? ' similar-product-card-body' : ''}`;
+
+    const title = document.createElement('h3');
+    title.className = `product-title${isSimilar ? ' line-clamp-2' : ''}`;
+    title.innerHTML = formatTitleHTML(p.title);
+
+    const descriptionContainer = document.createElement('div');
+    descriptionContainer.className = 'mb-2';
+
+    const desc = document.createElement('p');
+    desc.className = `product-desc ${isSimilar ? 'line-clamp-2' : 'line-clamp-3'}`;
+    desc.textContent = escapeHTML(p.desc);
+    descriptionContainer.appendChild(desc);
+
+    if (!isSimilar) {
+        const seeMore = document.createElement('a');
+        seeMore.href = safeUrl;
+        seeMore.className = 'product-see-more';
+        seeMore.textContent = 'Ver más';
+        descriptionContainer.appendChild(seeMore);
+    }
+
+    const specsContainer = document.createElement('div');
+    specsContainer.className = 'product-specs';
+    if (p.specs) {
+        const specsList = isSimilar ? p.specs.slice(0, 2) : p.specs;
+        specsList.forEach(s => {
+            const specItem = document.createElement('div');
+            specItem.className = 'spec-item';
+
+            const labelSpan = document.createElement('span');
+            labelSpan.className = 'spec-label';
+            labelSpan.textContent = `${escapeHTML(s.label)}:`;
+
+            const valueSpan = document.createElement('span');
+            if (!isSimilar) {
+                valueSpan.title = escapeHTML(s.val);
+            }
+            valueSpan.textContent = escapeHTML(s.val);
+
+            specItem.appendChild(labelSpan);
+            specItem.appendChild(valueSpan);
+            specsContainer.appendChild(specItem);
+        });
+    }
+
+    const actionWrap = document.createElement('div');
+    actionWrap.className = `card-action${isSimilar ? ' similar-btn-container' : ''}`;
+    const actionBtn = document.createElement('a');
+    actionBtn.href = safeUrl;
+    actionBtn.className = p.url ? `btn btn-primary btn-block ${isSimilar ? 'btn-sm' : ''}` : `btn btn-outline btn-block btn-secondary-outline ${isSimilar ? 'btn-sm' : ''}`;
+    actionBtn.textContent = p.url ? `Ver Detalles${!isSimilar ? ' de Producto' : ''}` : (isSimilar ? 'Cotizar' : 'Solicitar Cotización');
+    actionWrap.appendChild(actionBtn);
+
+    info.appendChild(title);
+    info.appendChild(descriptionContainer);
+    info.appendChild(specsContainer);
+    info.appendChild(actionWrap);
+
+    card.appendChild(imageLink);
+    card.appendChild(info);
+    return card;
 }
 
 /**
@@ -577,19 +666,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (section) section.style.display = 'block';
                         const similarFrag = document.createDocumentFragment();
                         similar.forEach(sp => {
-                            const card = document.createElement("div");
-                            card.className = "product-card similar-product-card";
-
-                            card.innerHTML = generateProductCardHTML(sp, true);
-                            const imgEl = card.querySelector('.product-image img');
-                            if (imgEl) {
-                                const ph = card.querySelector('.placeholder-icon');
-                                imgEl.addEventListener('error', () => {
-                                    imgEl.style.display = 'none';
-                                    if (ph) ph.style.display = 'flex';
-                                });
-                            }
-                            similarFrag.appendChild(card);
+                            similarFrag.appendChild(createProductCardDOM(sp, true));
                         });
                         similarGrid.appendChild(similarFrag);
                     } else {
@@ -605,47 +682,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/**
- * Helper to generate HTML for product cards following DRY principles.
- * @param {Object} p - Product data object
- * @param {boolean} isSimilar - If true, generates the compact version for "Similar Products"
- * @returns {string} HTML string
- */
-function generateProductCardHTML(p, isSimilar = false) {
-    const url = p.url ? p.url : 'index.html#contact';
-    const safeUrl = sanitizeURL(url);
-    const actionBtnHTML = p.url
-            ? `<a href="${safeUrl}" class="btn btn-primary btn-block ${isSimilar ? 'btn-sm' : ''}">Ver Detalles${!isSimilar ? ' de Producto' : ''}</a>`
-        : `<a href="${safeUrl}" class="btn btn-outline btn-block btn-secondary-outline ${isSimilar ? 'btn-sm' : ''}">${isSimilar ? 'Cotizar' : 'Solicitar Cotización'}</a>`;
 
-    const specsHTML = p.specs 
-        ? (isSimilar ? p.specs.slice(0, 2) : p.specs).map(s => 
-            `<div class="spec-item"><span class="spec-label">${escapeHTML(s.label)}:</span> <span ${!isSimilar ? `title="${escapeHTML(s.val)}"` : ''}>${escapeHTML(s.val)}</span></div>`
-          ).join('') 
-        : '';
-
-    return `
-        <a href="${safeUrl}" class="product-image">
-                <img src="${sanitizeURL(p.img)}" alt="${escapeHTML(p.title)}"/>
-            <div class="placeholder-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-            </div>
-            <div class="image-overlay"></div>
-        </a>
-        <div class="product-info ${isSimilar ? 'similar-product-card-body' : ''}">
-            <h3 class="product-title ${isSimilar ? 'line-clamp-2' : ''}">${formatTitleHTML(p.title)}</h3>
-            <div class="mb-2">
-                <p class="product-desc ${isSimilar ? 'line-clamp-2' : 'line-clamp-3'}" ${!isSimilar ? `id="desc-${escapeHTML(p.id)}"` : ''}>${escapeHTML(p.desc)}</p>
-                ${!isSimilar ? `<a href="${safeUrl}" class="product-see-more">Ver más</a>` : ''}
-            </div>
-            <div class="product-specs">
-                ${specsHTML}
-            </div>
-            <div class="card-action ${isSimilar ? 'similar-btn-container' : ''}">
-                ${actionBtnHTML}
-            </div>
-        </div>
-    `;
-}
