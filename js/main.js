@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFeaturedProducts();
     initMapToggle();
     initProductShareButtons();
+    initImageBackgroundMatcher();
 });
 
 /**
@@ -402,4 +403,91 @@ function initFeaturedProducts() {
         });
         featuredGrid.appendChild(frag);
     }
+}
+
+/**
+ * Adapta el color de fondo de los contenedores de imágenes al color de fondo de las propias imágenes.
+ * Detecta dinámicamente el color de fondo (usando un pixel de la esquina) y lo aplica al contenedor.
+ * Soporta elementos dinámicos mediante observación de mutaciones en el DOM.
+ */
+function initImageBackgroundMatcher() {
+    const selectors = [
+        { img: '.product-cards-grid .image', container: '.image-link' },
+        { img: '.fc-image img', container: '.fc-image' },
+        { img: '.product-image img', container: '.product-image' },
+        { img: '.main-image-container img', container: '.main-image-container' },
+        { img: '.thumbnail-item img', container: '.thumbnail-item' }
+    ];
+
+    function matchImage(img, containerSelector) {
+        if (img.dataset.bgMatched) return;
+
+        const updateBackground = () => {
+            try {
+                const canvas = document.createElement('canvas');
+                canvas.width = 10;
+                canvas.height = 10;
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return;
+                
+                // Dibujamos la esquina superior izquierda de la imagen
+                ctx.drawImage(img, 0, 0);
+                const data = ctx.getImageData(5, 5, 1, 1).data;
+                const r = data[0];
+                const g = data[1];
+                const b = data[2];
+                const a = data[3];
+
+                // Si la esquina no es transparente, aplicamos el color de fondo extraído
+                if (a > 200) {
+                    const hex = '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+                    img.style.backgroundColor = hex;
+                    const container = img.closest(containerSelector);
+                    if (container) {
+                        container.style.backgroundColor = hex;
+                    }
+                    img.dataset.bgMatched = 'true';
+                }
+            } catch (e) {
+                // Silenciamos posibles excepciones de origen cruzado (CORS) en local
+                console.warn('No se pudo extraer el color de fondo para la imagen: ' + img.src, e);
+            }
+        };
+
+        if (img.complete) {
+            updateBackground();
+        } else {
+            img.addEventListener('load', updateBackground);
+        }
+    }
+
+    function scanAndMatch() {
+        selectors.forEach(item => {
+            document.querySelectorAll(item.img).forEach(img => {
+                matchImage(img, item.container);
+            });
+        });
+    }
+
+    // Escaneo inicial
+    scanAndMatch();
+
+    // Observador para detectar elementos que se cargan dinámicamente en el DOM (filtros, paginación, etc.)
+    const observer = new MutationObserver((mutations) => {
+        let shouldScan = false;
+        for (let mutation of mutations) {
+            if (mutation.addedNodes.length > 0) {
+                shouldScan = true;
+                break;
+            }
+        }
+        if (shouldScan) {
+            scanAndMatch();
+        }
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 }
