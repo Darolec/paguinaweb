@@ -492,28 +492,6 @@
         </svg>
         <span>Cotiza por WhatsApp</span>
     </a>
-    <script>
-      const imagesToExtract = [
-        { name: 'Kindly Huber', src: 'assets/Productos/Kindly/huber/huber.png' },
-        { name: 'Fushan Reservorio', src: 'assets/Productos/fushan/reservorio de silicon/reservariodesilicon.png' },
-        { name: 'Zhongshan Balon', src: 'assets/Productos/Zhongshan/BalonBacky/balonposparto.png' },
-        { name: 'Curaway Aguja', src: 'assets/Productos/curaway/aguja para sistemamagnum/Magnum.png' }
-      ];
-      imagesToExtract.forEach(item => {
-        const img = new Image();
-        img.src = item.src;
-        img.onload = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.width;
-          canvas.height = img.height;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0);
-          const data = ctx.getImageData(10, 10, 1, 1).data;
-          const hex = '#' + Array.from(data.slice(0, 3)).map(x => x.toString(16).padStart(2, '0')).join('');
-          console.log('EXTRACTED_COLOR_' + item.name.replace(' ', '_') + ':', hex);
-        };
-      });
-    </script>
 </body>
 
 </html>

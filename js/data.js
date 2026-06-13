@@ -25,7 +25,7 @@ const allProducts = [
     {
         id: "prod-curaway-agujasemiautomatica",
         title: "Aguja para Biopsia Semi-automatica",
-        desc: "Alcance ajustable de 10mm o 20mm. Diseño exclisivo de bloqueo de seguridad para evitar disparos accedentales deurante el prcedimiento.",
+        desc: "Alcance ajustable de 10mm o 20mm. Diseño exclusivo de bloqueo de seguridad para evitar disparos accidentales durante el procedimiento.",
         img: "assets/Productos/curaway/agujaSemi-automatica/SemiAutomatica.png",
         gallery: ["assets/Productos/curaway/agujaSemi-automatica/SemiAutomatica.png"],
         specs: [{ label: "Marca", val: "Curaway" }, { label: "Uso", val: "Biopsia" }, { label: "Calibre", val: "14G, 16G, 18G" }, { label: "Longitud", val: "80mm, 100mm, 130mm, 160mm, 200mm, 250mm" }],
@@ -46,8 +46,8 @@ const allProducts = [
     },
     {
         id: "prod-curaway-alambredeinspeccionmamaria",
-        title: "Alambre de inspeccion mamaria",
-        desc: "Este intumento esta localiado para localizar microlesiones mamarias con guia de rayos X o ultrasonido. Proporciona instrucciones claras a los cirujanos para disminucion de la incicion y la herida.",
+        title: "Alambre de inspección mamaria",
+        desc: "Este instrumento está diseñado para localizar microlesiones mamarias con guía de rayos X o ultrasonido. Proporciona instrucciones claras a los cirujanos para la disminución de la incisión y la herida.",
         img: "assets/Productos/curaway/Alambredeinspeccionmamaria/AlambreMamario.png",
         gallery: ["assets/Productos/curaway/Alambredeinspeccionmamaria/AlambreMamario.png"],
         specs: [{ label: "Marca", val: "Curaway" }, { label: "Uso", val: "Inspección Mamaria" }, { label: "Modelos", val: "Version J, Vercion Y, Version Q" }, { label: "Longitud", val: "N/A" }],
@@ -80,7 +80,7 @@ const allProducts = [
     {
         id: "prod-curaway-jamshiy",
         title: "Aguja manual  para médula ósea (Tipo Jamshidy)",
-        desc: "Diseño de doble punta para una mayor comodidad al tomar muestras de diferentes puntos. Diseño de extremo poroso para una recolección de muestras tridimensional más completa..",
+        desc: "Diseño de doble punta para una mayor comodidad al tomar muestras de diferentes puntos. Diseño de extremo poroso para una recolección de muestras tridimensional más completa.",
         img: "assets/Productos/curaway/Jamshiy/AgujaJamshidi.png",
         gallery: ["assets/Productos/curaway/Jamshiy/AgujaJamshidi.png"],
         specs: [{ label: "Marca", val: "Curaway" }, { label: "Uso", val: "Biopsia" }, { label: "Calibre", val: "11G, 13G" }, { label: "Longitud", val: "50mm, 70mm, 100mm, 150mm" }],
@@ -242,8 +242,8 @@ const allProducts = [
     },
     {
         id: "prod-fushan-sondagastircalevin",
-        title: "Sonda Gastirca Levin",
-        desc: "Ficha técnica para Sonda Gastirca Levin (Fushan).",
+        title: "Sonda Gástrica Levin",
+        desc: "Ficha técnica para Sonda Gástrica Levin (Fushan).",
         img: "assets/Productos/fushan/SondaGastircaLevin/CatatersondaGastricaLevin.png",
         gallery: ["assets/Productos/fushan/SondaGastircaLevin/CatatersondaGastricaLevin.png"],
         specs: [{ label: "Marca", val: "Fushan" }, { label: "Uso", val: "Drenaje Quirúrgico" }, { label: "Calibre", val: "N/A" }, { label: "Longitud", val: "Catéter" }],
@@ -275,8 +275,8 @@ const allProducts = [
     },
     {
         id: "prod-fushan-tubogatricodesilicon",
-        title: "Tubo Gatrico de Silicon",
-        desc: "Ficha técnica para Tubo Gatrico de Silicon (Fushan).",
+        title: "Tubo Gástrico de Silicon",
+        desc: "Ficha técnica para Tubo Gástrico de Silicon (Fushan).",
         img: "assets/Productos/fushan/TuboGastrico/TuboGatricodeSilicon/TuboGastirco deSilicon.png",
         gallery: ["assets/Productos/fushan/TuboGastrico/TuboGatricodeSilicon/TuboGastirco deSilicon.png"],
         specs: [{ label: "Marca", val: "Fushan" }, { label: "Uso", val: "Nutrición / Alimentación" }, { label: "Calibre", val: "N/A" }, { label: "Longitud", val: "114cm (Sonda)" }],

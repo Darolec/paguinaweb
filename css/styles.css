@@ -3383,41 +3383,58 @@ body {
 .product-cards-grid .card {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
-  height: 410px; /* 10% smaller */
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  justify-content: flex-end;
+  height: 380px; /* fixed height for overlay layout */
+  background-color: #b4e8fd; /* match background on load */
+  border: none;
 }
 
 .product-cards-grid .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
-  border-color: rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .product-cards-grid .image-link {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 160px;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  height: 100%;
+  z-index: 1;
+  border-radius: 0;
+  border-bottom: none;
   overflow: hidden;
   display: block;
   background-color: #b4e8fd;
+}
+
+/* Gradient overlay to make text highly readable */
+.product-cards-grid .image-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(15, 43, 72, 0.95) 0%, rgba(15, 43, 72, 0.75) 45%, rgba(15, 43, 72, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .product-cards-grid .image {
   width: 100%;
   height: 100%;
   object-fit: contain; /* centers the product image without cropping */
-  background-color: #b4e8fd;
+  background-color: transparent;
   transition: transform 0.5s ease;
   object-position: center;
   display: block;
+  padding-bottom: 140px; /* pushes the product image upward away from bottom text overlay */
 }
 
 .product-cards-grid .card:hover .image {
@@ -3425,38 +3442,40 @@ body {
 }
 
 .product-cards-grid .content {
+  position: relative;
+  z-index: 3; /* display above the gradient overlay */
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  flex: 1;
-  color: #333333;
+  padding: 20px;
+  color: #ffffff; /* white text overlay */
 }
 
 .product-cards-grid .content h2 {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--primary);
+  color: #ffffff;
   margin: 0 0 2px 0;
   line-height: 1.25;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .product-cards-grid .content h3 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 8px 0;
 }
 
 .product-cards-grid .content p {
-  font-size: 0.78rem;
-  line-height: 1.35;
-  color: #555555;
-  margin: 0 0 10px 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 12px 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 2; /* clamp to 2 lines for spacing */
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -3477,15 +3496,15 @@ body {
   align-items: center;
   gap: 6px;
   font-size: 0.72rem;
-  background: rgba(0, 102, 204, 0.06);
-  border: 1px solid rgba(0, 102, 204, 0.1);
-  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 4px 10px;
   border-radius: 20px;
-  color: #0066cc;
+  color: #ffffff;
 }
 
 .product-cards-grid .item svg {
-  stroke: #0066cc;
+  stroke: #ffffff;
   width: 14px;
   height: 14px;
 }
@@ -3493,28 +3512,31 @@ body {
 .product-cards-grid .buttons {
   display: flex;
   gap: 8px;
-  margin-top: auto; /* push buttons to bottom */
+  margin-top: 0;
+  padding-top: 4px;
   align-items: center;
   width: 100%;
 }
 
 .product-cards-grid .primary-btn {
   flex: 1;
-  background: var(--primary);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--primary);
   border: none;
   border-radius: 30px;
-  padding: 8px 16px;
-  font-size: 0.85rem;
+  padding: 10px 16px;
+  font-size: 0.88rem;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .product-cards-grid .primary-btn:hover {
-  background: var(--accent);
+  background: #f1f5f9;
+  color: var(--primary);
 }
 
 .product-cards-grid .icon-btn {
@@ -3571,6 +3593,10 @@ body {
     flex-direction: row;
     height: 230px; /* 10% smaller height */
     overflow: visible;
+    background-color: #ffffff; /* restore white background */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* restore border */
+    justify-content: flex-start; /* reset spacing */
+    border-radius: 16px;
   }
 
   .product-cards-grid .card:hover {
@@ -3584,7 +3610,7 @@ body {
     height: 100%;
     margin-left: -24px; /* decreased margin left to create separate spacing */
     align-self: stretch;
-    border-radius: 20px;
+    border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     z-index: 5;
     border-bottom: none;
@@ -3592,6 +3618,10 @@ body {
     overflow: hidden;
     display: block;
     background-color: #b4e8fd;
+  }
+
+  .product-cards-grid .image-link::after {
+    content: none; /* remove overlay */
   }
 
   .product-cards-grid .image {
@@ -3602,6 +3632,7 @@ body {
     box-shadow: none;
     border: none;
     background-color: #b4e8fd;
+    padding-bottom: 0; /* reset padding */
   }
 
   .product-cards-grid .content {
@@ -3656,6 +3687,8 @@ body {
   .product-cards-grid .buttons {
     align-items: center;
     gap: 6px;
+    margin-top: auto; /* restore */
+    padding-top: 0; /* reset */
   }
 
   .product-cards-grid .primary-btn {
@@ -3664,6 +3697,8 @@ body {
     padding: 8px 14px;
     font-size: 0.8rem;
     max-width: 80%;
+    border-radius: 30px; /* keep pill style */
+    box-shadow: none; /* remove mobile shadow */
   }
 
   .product-cards-grid .primary-btn:hover {
