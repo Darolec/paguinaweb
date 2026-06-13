@@ -3407,13 +3407,14 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   overflow: hidden;
   display: block;
+  background-color: #b4e8fd;
 }
 
 .product-cards-grid .image {
   width: 100%;
   height: 100%;
   object-fit: contain; /* centers the product image without cropping */
-  background-color: #ffffff;
+  background-color: #b4e8fd;
   transition: transform 0.5s ease;
   object-position: center;
   display: block;
@@ -3590,6 +3591,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.04);
     overflow: hidden;
     display: block;
+    background-color: #b4e8fd;
   }
 
   .product-cards-grid .image {
@@ -3599,6 +3601,7 @@ body {
     border-radius: 0;
     box-shadow: none;
     border: none;
+    background-color: #b4e8fd;
   }
 
   .product-cards-grid .content {
