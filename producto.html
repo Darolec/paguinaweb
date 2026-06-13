@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Detalles del Producto - Darolec Comercial</title>
+    <meta name="description" content="Detalles del producto seleccionado dentro del catálogo de insumos médicos de Darolec Comercial.">
+    <!-- Google Fonts & Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/logos/logolargosinfondo.png" as="image" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <noscript><div class="noscript-warning">Esta página necesita JavaScript para mostrar los detalles del producto. Activa JavaScript o regresa al catálogo.</div></noscript>
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logolargosinfondo.png" alt="Darolec Comercial Logo Largo"
+                    fetchpriority="high">
+            </a>
+            <nav class="nav-links" id="primary-navigation" aria-label="Menú principal">
+                <a href="index.html#home">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="productos.html" class="active-link" aria-current="page">Equipos e Insumos</a>
+                <a href="corporativa.html">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a> / <a id="detailBreadcrumbCat" href="productos.html">Catálogo</a> /
+                    <span id="detailBreadcrumbName">Cargando...</span>
+                </div>
+
+                <div class="product-main">
+                    <div class="product-gallery-container">
+                        <div class="main-image-container" id="mainImageContainer">
+                            <button id="prevBtn" class="gallery-nav prev" aria-label="Anterior">&lsaquo;</button>
+                            <img id="detailImage" src="" alt="Cargando..." fetchpriority="high" />
+                            <button id="nextBtn" class="gallery-nav next" aria-label="Siguiente">&rsaquo;</button>
+                            <div class="placeholder-icon" id="mainPlaceholder">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z">
+                                    </path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="thumbnail-list" id="thumbnailList">
+                            <!-- JS injected thumbnails -->
+                        </div>
+                    </div>
+
+                    <div class="product-info-detail">
+                        <div class="product-info-header">
+                            <div class="product-badges-container">
+                                <div class="product-badge" id="productBadge">Estéril</div>
+                                <a href="corporativa.html" class="product-badge badge-availability">Preguntar por
+                                    existencias</a>
+                            </div>
+                            <div class="share-buttons-container">
+                                <!-- WhatsApp -->
+                                <button type="button" data-action="share-whatsapp" title="Compartir en WhatsApp" class="share-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    </svg>
+                                </button>
+                                <!-- Phone -->
+                                <a href="corporativa.html" title="Contacto" class="share-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <!-- Copy Link -->
+                                <button type="button" data-action="copy-link"
+                                    title="Copiar Enlace" class="share-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <h1 id="detailTitle">Cargando Producto...</h1>
+                        <p class="product-description" id="detailDesc">
+                            Cargando información detallada del producto. Por favor espere...
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="spec-table">
+                                <tbody id="detailTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="delivery-methods-wrapper">
+                            <h3 class="delivery-methods-title">Formas de entrega</h3>
+                            <div class="delivery-methods-grid">
+
+                                <!-- Envío Domicilio -->
+                                <div class="delivery-method-card">
+                                    <div class="delivery-method-header">
+                                        <div class="delivery-icon-container">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                            </svg>
+                                        </div>
+                                        <h4 class="delivery-method-title">Envíos por paquetería</h4>
+                                    </div>
+                                    <p class="delivery-method-desc">Con cargos extra dependiendo de la ubicación de
+                                        entrega</p>
+                                </div>
+
+                                <!-- Recoger Sucursal -->
+                                <div class="delivery-method-card">
+                                    <div class="delivery-method-header">
+                                        <div class="delivery-icon-container">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M3 21v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"></path>
+                                                <path d="M3 13L21 13"></path>
+                                                <rect x="8" y="6" width="8" height="7"></rect>
+                                                <path d="M12 13v8"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="delivery-method-title">Recoger en sucursal</h4>
+                                    </div>
+                                    <a href="corporativa.html" class="branch-link">Aquí puedes encontrarnos <svg
+                                            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5l7 7-7 7"></path>
+                                        </svg></a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="action-area">
+                            <a href="index.html#contact" class="btn btn-primary btn-lg">Solicitar Cotización</a>
+                            <a href="productos.html" class="btn btn-outline btn-lg btn-secondary-outline">Volver
+                                al Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Similar Products Section -->
+        <section class="similar-products-section" id="similarProductsSection">
+            <div class="container">
+                <h2 class="similar-products-title">Productos Similares</h2>
+                <div class="similar-product-grid" id="similarProductsGrid">
+                    <!-- Javascript will inject cards here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/logos/logo pequeño sinfondo.png" alt="Darolec Comercial Logo" loading="lazy">
+                    <span class="logo-wordmark">Darolec <span>Comercial</span></span>
+                </div>
+                <p>Atendemos y cubrimos las necesidades del sector salud tanto en la iniciativa privada como en el
+                    gobierno.</p>
+            </div>
+            <div class="footer-links">
+                <h4>¿Por qué comprar en Darolec Comercial?</h4>
+                <ul>
+                    <li><span>•</span> Somos el mejor proveedor a nivel nacional.</li>
+                    <li><span>•</span> Comercializamos con el sector Privado y Gobierno en México.</li>
+                    <li><span>•</span> Distribución en Menudeo y Mayoreo.</li>
+                    <li><span>•</span> Material de Curación e Instrumental Médico.</li>
+                    <li><span>•</span> Distinguiéndose por ofrecer un servicio de calidad.</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>mifactura@darolec.com</p>
+                <p>+52 (55) 3035 0154</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Darolec Comercial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/data.js" defer></script>
+    <script src="js/productos.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <a href="https://wa.me/525530350154?text=Hola%20Darolec%20Comercial%2C%20quiero%20una%20cotizaci%C3%B3n%20directa." class="whatsapp-float-btn" target="_blank" rel="noreferrer noopener" aria-label="Cotiza por WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.967-.942 1.166-.173.198-.347.223-.645.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.497.099-.198.05-.372-.025-.521-.074-.149-.672-1.612-.921-2.206-.242-.579-.487-.5-.672-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.71.307 1.262.49 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.01-1.413.248-.694.248-1.29.173-1.414-.074-.124-.273-.198-.57-.347z" />
+            <path d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 2.12.62 4.08 1.68 5.75L2 22l4.43-1.16C8.04 21.44 9.98 22 12 22c5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04zM12 20.02c-1.86 0-3.6-.5-5.12-1.45l-.36-.21-2.63.69.7-2.56-.24-.41C3.23 14.45 2.84 13.26 2.84 12c0-4.99 4.07-9.06 9.06-9.06s9.06 4.07 9.06 9.06-4.07 9.06-9.06 9.06z" />
+        </svg>
+        <span>Cotiza por WhatsApp</span>
+    </a>
+</body>
+
+</html>
